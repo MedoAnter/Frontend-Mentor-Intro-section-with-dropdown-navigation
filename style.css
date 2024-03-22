@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+#header {
+  position: relative;
+  height: 100vh;
+  background: var(--Almost-White);
+}
+
+#header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+#header .navbar nav {
+  transform: translateX(-390px);
+}
+
+#header .navbar nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header .navbar nav ul a {
+  margin-right: 20px;
+  color: var(--Medium-Gray);
+  font-size: 16px;
+}
+
+#header .navbar nav ul li:not(:nth-child(3)) a:hover {
+  color: var(--Almost-Black);
+}
+
+#header .navbar nav ul li:nth-child(1) a:hover img,
+#header .navbar nav ul li:nth-child(2) a:hover img {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+}
+
+#header .navbar nav ul .list-1 li {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#header .navbar nav ul .list-1 ul {
+  position: absolute;
+  width: 150px;
+  display: none;
+  flex-wrap: wrap;
+  left: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#header .navbar nav ul .list-1:hover ul {
+  display: block;
+}
+
+#header .navbar nav ul .list-1 ul li {
+  margin: 10px 0;
+}
+
+#header .navbar nav ul .list-1 ul li img {
+  margin-right: 10px;
+}
+
+#header .navbar nav ul .list-2 li {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#header .navbar nav ul .list-2 ul {
+  position: absolute;
+  width: 150px;
+  display: none;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#header .navbar nav ul .list-2 ul li a {
+  margin: 8px 0;
+}
+
+#header .navbar nav ul .list-2:hover ul {
+  display: block;
+}
+
+#header .navbar .sign a,
+.btn {
+  color: var(--Almost-Black);
+  background: none;
+  color: var(--Medium-Gray);
+}
+
+#header .navbar .sign a:hover,
+.btn:hover {
+  color: var(--Almost-Black);
+}
+
+#header .navbar .sign a:first-child {
+  border: none;
+}
+
+#header .navbar .sign .btn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 15px;
+  border: 2px solid var(--Medium-Gray);
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--Medium-Gray);
+}
+
+.btn:hover {
+  border-color: var(--Almost-Black);
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 1100px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.header-content .content-text {
+  position: relative;
+}
+
+.header-content .content-text h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.header-content .content-text p {
+  width: 70%;
+  color: var(--Medium-Gray);
+  line-height: 1.6;
+  margin-bottom: 45px;
+}
+
+.header-content .content-text .imgs {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.header-content .content-text .imgs img {
+  width: 80px;
+}
